@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - Properties
     @State private var checkAmount: Double = 0.0
     @State private var numberOfPeople: Int = 2
     @State private var tipPercentage: Int = 20
     let tipPercentages: [Int] = [10, 15, 20, 25, 0]
     
+    // MARK: - Computed Properties
+    var totalPerPerson: Double {
+        let peopleCount: Double = Double(numberOfPeople + 2)
+        let tipSelection: Double = Double(tipPercentage)
+        
+        let tipValue: Double = checkAmount / 100 * tipSelection
+        let grandTotal: Double = checkAmount + tipValue
+        let amountPerPerson: Double = grandTotal / peopleCount
+        
+        return amountPerPerson
+    }
+    
+    // MARK: - UI Components
     var body: some View {
         NavigationView {
             Form {
@@ -39,7 +53,7 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Text(checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 }
             }
             .navigationTitle("WeSplit")
