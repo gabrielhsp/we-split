@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    // MARK: - Properties
+    // MARK: - Property Wrappers
     @State private var checkAmount: Double = 0.0
     @State private var numberOfPeople: Int = 2
     @State private var tipPercentage: Int = 20
     @FocusState private var amountIsFocused: Bool
     
     // MARK: - Computed Properties
+    private var currencyCode: FloatingPointFormatStyle<Double>.Currency {
+        return .currency(code: Locale.current.currencyCode ?? "USD")
+    }
+    
     var tipValue: Double {
         let tipSelection: Double = Double(tipPercentage)
         
@@ -37,7 +41,7 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    TextField("Amount", value: $checkAmount, format: currencyCode)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                     
@@ -59,13 +63,13 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    Text(totalPerPerson, format: currencyCode)
                 } header : {
                     Text("Amount per person")
                 }
                 
                 Section {
-                    Text(totalCheck, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    Text(totalCheck, format: currencyCode)
                 } header: {
                     Text("Total amount")
                 }
