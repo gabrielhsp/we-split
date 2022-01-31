@@ -13,7 +13,6 @@ struct ContentView: View {
     @State private var numberOfPeople: Int = 2
     @State private var tipPercentage: Int = 20
     @FocusState private var amountIsFocused: Bool
-    let tipPercentages: [Int] = [10, 15, 20, 25, 0]
     
     // MARK: - Computed Properties
     var tipValue: Double {
@@ -51,11 +50,10 @@ struct ContentView: View {
                 
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
+                        ForEach(0..<101) {
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
