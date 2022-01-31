@@ -16,13 +16,19 @@ struct ContentView: View {
     let tipPercentages: [Int] = [10, 15, 20, 25, 0]
     
     // MARK: - Computed Properties
-    var totalPerPerson: Double {
-        let peopleCount: Double = Double(numberOfPeople + 2)
+    var tipValue: Double {
         let tipSelection: Double = Double(tipPercentage)
         
-        let tipValue: Double = checkAmount / 100 * tipSelection
-        let grandTotal: Double = checkAmount + tipValue
-        let amountPerPerson: Double = grandTotal / peopleCount
+        return checkAmount / 100 * tipSelection
+    }
+    
+    var totalCheck: Double {
+        return checkAmount + tipValue
+    }
+    
+    var totalPerPerson: Double {
+        let peopleCount: Double = Double(numberOfPeople + 2)
+        let amountPerPerson: Double = totalCheck / peopleCount
         
         return amountPerPerson
     }
@@ -58,6 +64,12 @@ struct ContentView: View {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 } header : {
                     Text("Amount per person")
+                }
+                
+                Section {
+                    Text(totalCheck, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                } header: {
+                    Text("Total amount")
                 }
             }
             .navigationTitle("WeSplit")
