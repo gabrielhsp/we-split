@@ -11,6 +11,7 @@
 		9B406A4027A0B77A001B6F28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B406A3F27A0B77A001B6F28 /* ContentView.swift */; };
 		9B406A4227A0B77B001B6F28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B406A4127A0B77B001B6F28 /* Assets.xcassets */; };
 		9B406A4527A0B77B001B6F28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B406A4427A0B77B001B6F28 /* Preview Assets.xcassets */; };
+		9BE7B05F27E1670400361FA8 /* TipPercentageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7B05E27E1670400361FA8 /* TipPercentageStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		9B406A3F27A0B77A001B6F28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9B406A4127A0B77B001B6F28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B406A4427A0B77B001B6F28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9BE7B05E27E1670400361FA8 /* TipPercentageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipPercentageStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				9B406A3F27A0B77A001B6F28 /* ContentView.swift */,
 				9B406A4127A0B77B001B6F28 /* Assets.xcassets */,
 				9B406A4327A0B77B001B6F28 /* Preview Content */,
+				9BE7B05E27E1670400361FA8 /* TipPercentageStyle.swift */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B406A4027A0B77A001B6F28 /* ContentView.swift in Sources */,
+				9BE7B05F27E1670400361FA8 /* TipPercentageStyle.swift in Sources */,
 				9B406A3E27A0B77A001B6F28 /* WeSplitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
