@@ -1,6 +1,6 @@
-# We Split
+# WeSplit
 
-We Split is a study app made using SwiftUI, being part of [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui), created by [Paul Hudson](https://twitter.com/twostraws).
+WeSplit is a study app made using SwiftUI, being part of [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui), created by [Paul Hudson](https://twitter.com/twostraws).
 
 The idea of this first project is study the basic concepts of a SwiftUI app, how we can create simple components, as text fields, segmented controls, pickers, text views.
 
